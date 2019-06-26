@@ -13,7 +13,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'rest_framework',
+    'rest_framework.authtoken',
+
+    'webpush',
+
+    'djapati',
 ]
 
 MIDDLEWARE = [
@@ -48,8 +54,15 @@ WSGI_APPLICATION = 'djapati_project.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        #'rest_framework.authentication.TokenAuthentication',
     ]
+}
+
+WEBPUSH_SETTINGS = {
+    "VAPID_PUBLIC_KEY": "BACgGVn9F_Atxglt9uSB6XqaXQaYt4KdToQ5FIfUxAtWTCjHQ5ko_E-8doWEQ1bxb_wgqbiUkgVQ9wj7BpVyZuw",
+    "VAPID_PRIVATE_KEY":"YQRkapy1N4yezGbxAjZ7V6JFw5l9L8Ofwu8tp2dq2VQ",
+    "VAPID_ADMIN_EMAIL": "subajat1@gmail.com"
 }
 
 DATABASES = {
@@ -81,3 +94,4 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'

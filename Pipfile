@@ -4,10 +4,19 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==1.11.20"
+django = "==1.11.21"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+pywebpush = "*"
+py-vapid = "*"
+django-webpush = "*"
+setuptools = "==36.7.1"
+http-ece = "*"
+"enum34" = "*"
+cryptography = "*"
+ipaddress = "*"
+paramiko = "==2.5.0"
 
 [dev-packages]
 
